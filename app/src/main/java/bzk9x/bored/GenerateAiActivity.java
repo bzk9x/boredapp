@@ -64,7 +64,8 @@ import org.json.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
+import com.google.gson.JsonElement;
+
 
 public class GenerateAiActivity extends AppCompatActivity {
 	
@@ -293,7 +294,7 @@ public class GenerateAiActivity extends AppCompatActivity {
 				listmap.add(m);
 				params = _formatPrompt(listmap);
 				gemini.setParams(params, RequestNetworkController.REQUEST_BODY);
-				gemini.startRequestNetwork(RequestNetworkController.POST, "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAh6qbGBLw-WySfMInKuWAEwdIdvfNRcK0", "", _gemini_request_listener);
+				gemini.startRequestNetwork(RequestNetworkController.POST, "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=API_KEY", "", _gemini_request_listener);
 			}
 		});
 		
@@ -882,4 +883,4 @@ public class GenerateAiActivity extends AppCompatActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}
